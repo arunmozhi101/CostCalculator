@@ -4,7 +4,6 @@ Console.WriteLine("\n");
 
 const int TEAM_AVERAGE_FLOORING_SPEED_PER_HOUR = 20;
 const int TEAM_COST_PER_HOUR = 86;
-const double PI = 3.14159265358979;
 const int RECTANGLE_FLOOR = 1;
 const int TRIANGLE_FLOOR = 2;
 const int CIRCLE_FLOOR = 3;
@@ -58,7 +57,7 @@ while (choiceNumber != EXIT)
         Console.WriteLine("Enter the radius of the Circular floor in centimeters: ");
         int radius = Convert.ToInt32(Console.ReadLine());
 
-        areaOfTheFloor = PI * radius * radius;
+        areaOfTheFloor = Math.PI * radius * radius;
     }
 
     timeRequiredForFlooring = areaOfTheFloor / TEAM_AVERAGE_FLOORING_SPEED_PER_HOUR;
