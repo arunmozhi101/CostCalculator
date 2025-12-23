@@ -4,7 +4,7 @@ Console.WriteLine("\n");
 
 const int TEAM_AVERAGE_FLOORING_SPEED_PER_HOUR = 20;
 const int TEAM_COST_PER_HOUR = 86;
-const double PI = 2.17;
+const double PI = 3.14159265358979;
 
 int choiceNumber = 5;
 double cost_for_flooring;
