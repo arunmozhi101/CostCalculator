@@ -14,15 +14,22 @@ double costOfFlooring;
 double areaOfTheFloor = 0.0;
 double timeRequiredForFlooring;
 
-while (choiceNumber != EXIT)
+while (true)
 {
     Console.WriteLine("Choose the shape of the floor from the list below: ");
-    Console.WriteLine(" 1 - Rectangle");
-    Console.WriteLine(" 2 - Triangle");
-    Console.WriteLine(" 3 - Circle");
-    Console.WriteLine(" 0 - Exit");
+    Console.WriteLine($"{RECTANGLE_FLOOR} - Rectangle");
+    Console.WriteLine($"{TRIANGLE_FLOOR} - Triangle");
+    Console.WriteLine($"{CIRCLE_FLOOR} - Circle");
+    Console.WriteLine($"{EXIT} - Exit");
 
     choiceNumber = Convert.ToInt32(Console.ReadLine());
+
+    if (choiceNumber == EXIT)
+    {
+        Console.WriteLine("Exiting...");
+        Console.WriteLine("Thanks for using the Flooring CostCalculator Program");
+        break;
+    }
 
     if (choiceNumber != EXIT && choiceNumber != RECTANGLE_FLOOR &&  choiceNumber != CIRCLE_FLOOR && choiceNumber != TRIANGLE_FLOOR)
     {
@@ -62,8 +69,8 @@ while (choiceNumber != EXIT)
 
     timeRequiredForFlooring = areaOfTheFloor / TEAM_AVERAGE_FLOORING_SPEED_PER_HOUR;
     costOfFlooring = TEAM_COST_PER_HOUR * timeRequiredForFlooring;
-
+    
+    Console.WriteLine("---------------------------");
     Console.WriteLine($"Cost for flooring: $ {costOfFlooring.ToString("F2")}");
+    Console.WriteLine("---------------------------");
 }
-
-Console.WriteLine("Thanks for using the Flooring CostCalculator Program");
