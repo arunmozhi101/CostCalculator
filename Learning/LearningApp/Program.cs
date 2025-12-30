@@ -32,4 +32,4 @@ for(int i=0; i < Array2D.GetLength(0); i++)
 
 Array.ForEach(Array1D, Console.WriteLine);
 
-Array.ForEach(Array2D, Console.WriteLine);
+Array.ForEach(ArrayD, Console.WriteLine);
